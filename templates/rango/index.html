@@ -4,7 +4,7 @@
 
 <html>
   <head>
-    <title>Rango | Index</title>
+    <title>Rango</title>
   </head>
   <body>
     <h1>Rango says...</h1>
@@ -14,7 +14,9 @@
     {% if categories %}
     <ul>
         {% for category in categories %}
-            <li>{{ category }}</li>
+            <li>
+              <a href="/rango/category/{{ category.slug }}">{{ category }}</a>
+            </li>
         {% endfor %}
     </ul>
     {% else %}
